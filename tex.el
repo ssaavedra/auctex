@@ -1117,7 +1117,7 @@ all the regular expressions must match for the element to apply."
     (output-html
      (string-match "html" (TeX-output-extension)))
     (has-no-display-manager
-     (not (or window-system (getenv "DISPLAY"))))
+     (not (or window-system (getenv "DISPLAY" (selected-frame)))))
     (style-pstricks
      (TeX-match-style "^pstricks$\\|^pst-\\|^psfrag$"))
     (engine-omega
